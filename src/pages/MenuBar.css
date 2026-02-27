@@ -1,0 +1,47 @@
+.menu-bar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 15px 0;
+  margin: 0;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove default link styling */
+.menu-bar a {
+  text-decoration: none;
+}
+
+/* Menu items */
+.menu-bar li {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.menu-bar li:hover {
+  transform: translateY(-3px);
+}
+
+/* Underline animation */
+.menu-bar li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: white;
+  transition: 0.3s ease;
+}
+
+.menu-bar li:hover::after {
+  width: 100%;
+}

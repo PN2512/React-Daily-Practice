@@ -1,17 +1,27 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import Homepage from './pages/Homepage'
+import Loginpage from './pages/Loginpage'
+import RegisterForm from '../src/pages/RegisterForm'
+import MenuBar from './pages/MenuBar'
+import ShopPage from './pages/ShopPage'
 import './App.css'
-import Test from './components/Test'
-// import Register from './components/Register'
-import RegisterForm from './components/RegisterForm'
-import RegisterForm1 from './components/RegisterForm1'
+
+
 
 const App = () => {
   return (
-    <div>
-     <Test/>
-     {/* <Register/> */}
-     {/* <RegisterForm/> */}
-     <RegisterForm1/>
-    </div>
+ <>
+ <Router>
+  <MenuBar/>
+  <Routes>
+    <Route path='/' element={<Homepage/>}/>
+    <Route path='/login' element={<Loginpage/>}/>
+    <Route path='/register' element={<RegisterForm/>}/>
+    <Route path='/Shop' element={<ShopPage/>}/>
+  </Routes>
+ </Router>
+ 
+ </>
   )
 }
 
